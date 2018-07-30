@@ -3,3 +3,4 @@ sc-im           vim excell
 calcurse        a calendar and todo program
 ranger          vim inspired file manager
 zathura         vim inspired minimalistic pdf reader
+gksu            a graphical sudo. used in i3 config

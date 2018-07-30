@@ -168,3 +168,4 @@ gaps outer 10
 
 bindsym $mod+p exec --no-startup-id /home/mesih/scripts/monitor.sh
 bindsym $mod+Shift+a exec --no-startup-id /home/mesih/scripts/audio.sh
+bindsym $mod+Shift+n exec --no-startup-id gksu /home/mesih/scripts/net_fix.sh
