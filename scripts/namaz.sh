@@ -57,7 +57,7 @@ cat $FILE | grep -m1 -A 6 $DATE | grep -oP [0-9]+:[0-9]+ | while read -r line ; 
     Tline=$(minutes $line)
     if [ $(minutes $line) -gt $TIME ]
     then
-        RES=$(expr `$Tline \- $TIME` )
+        RES=$(echo $Tline \- $TIME | bc)
         
         echo $(printname $CNT) $(todate $RES)
         exit 0

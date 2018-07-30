@@ -5,3 +5,5 @@ use 'bear' to generate compilation database to use in vim for c, c++ projects
 set default programs: mimeopen -d *.pdf
 if i3 has big fonts it about glx driver. I don't know how to solve that
 to be able to use siji font: sudo mv /etc/fonts/conf.d/70-no-bitmaps.conf /etc/fonts/conf.d/70-no-bitmaps.conf.old
+ttf fonts can be used with adding to /usr/share/fonts/truetype/font-name/ & sudo fc-cache -f -v
+

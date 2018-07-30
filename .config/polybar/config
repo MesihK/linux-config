@@ -54,10 +54,12 @@ module-margin-right = 2
 font-0 = fixed:pixelsize=10;1
 font-1 = unifont:fontformat=truetype:size=8:antialias=false;0
 font-2 = siji:pixelsize=10;1
+font-3 = Weather Icons:size=8;1
+
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = namaz alsa filesystem xkeyboard memory cpu battery temperature date powermenu
+modules-right = openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature date powermenu
 
 tray-position = right
 tray-padding = 0
@@ -259,7 +261,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 5
+interval = 1
 
 ;date =
 date = " %d/%m/%Y"
@@ -423,7 +425,13 @@ margin-bottom = 5
 
 [module/namaz]
 type = custom/script
-exec = /home/mesih/scripts/namaz.sh
+exec = ~/scripts/namaz.sh
 interval = 60
+
+[module/openweathermap-fullfeatured]
+type = custom/script
+exec = ~/scripts/openweathermap-fullfeatured.sh
+interval = 600
+label-font = 3
 
 ; vim:ft=dosini
