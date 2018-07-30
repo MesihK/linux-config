@@ -57,7 +57,7 @@ font-2 = siji:pixelsize=10;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = alsa filesystem xkeyboard memory cpu battery temperature date powermenu
+modules-right = namaz alsa filesystem xkeyboard memory cpu battery temperature date powermenu
 
 tray-position = right
 tray-padding = 0
@@ -420,5 +420,10 @@ screenchange-reload = true
 [global/wm]
 margin-top = 5
 margin-bottom = 5
+
+[module/namaz]
+type = custom/script
+exec = /home/mesih/scripts/namaz.sh
+interval = 60
 
 ; vim:ft=dosini
