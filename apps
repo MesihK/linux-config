@@ -6,4 +6,6 @@ zathura         vim inspired minimalistic pdf reader
 gksu            a graphical sudo. used in i3 config
 polybar         a i3 bar    
 siji            font that polybar uses
+feh             liteweight image viewer
+slock           simple lock screen
 
