@@ -207,3 +207,7 @@ echo TODO:
 cat ~/todo
 
 printf "\e[?2004l"
+
+VISUAL=vim
+export VISUAL EDITOR=vim
+export EDITOR
