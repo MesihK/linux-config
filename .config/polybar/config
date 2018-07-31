@@ -59,7 +59,7 @@ font-3 = Weather Icons:size=8;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature date powermenu
+modules-right = finance openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature date powermenu
 
 tray-position = right
 tray-padding = 0
@@ -435,5 +435,12 @@ exec = ~/scripts/openweathermap-fullfeatured.sh
 interval = 600
 label-font = 3
 format-underline = #0a6cf5
+
+[module/finance]
+type = custom/script
+exec = ~/scripts/finance.sh
+interval = 600
+format-underline = #f50a4d
+
 
 ; vim:ft=dosini
