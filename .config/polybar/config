@@ -59,7 +59,7 @@ font-3 = Weather Icons:size=8;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = finance openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature wlan date 
+modules-right = finance openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature eth wlan date 
 
 tray-position = right
 tray-padding = 0
@@ -223,7 +223,7 @@ label = %gb_free%
 
 [module/wlan]
 type = internal/network
-interface = 
+interface = wlp2s0 
 interval = 3.0
 
 format-connected = <ramp-signal> <label-connected>
@@ -245,7 +245,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 
 [module/eth]
 type = internal/network
-interface = 
+interface = enp8s0
 interval = 3.0
 
 format-connected-underline = #55aa55
