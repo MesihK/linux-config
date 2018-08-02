@@ -206,8 +206,8 @@ export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
 echo TODO:
 cat ~/todo
 
-printf "\e[?2004l"
+# Import colorscheme from 'wal' asynchronously
+#(cat ~/.cache/wal/sequences &)
+# To add support for TTYs this line can be optionally added.
+#source ~/.cache/wal/colors-tty.sh
 
-VISUAL=vim
-export VISUAL EDITOR=vim
-export EDITOR

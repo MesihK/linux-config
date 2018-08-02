@@ -13,9 +13,11 @@ set $mod Mod1
 set $alt Mod4
 set $term --no-startup-id /usr/local/bin/st
 
-exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
+#exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
+exec_always --no-startup-id wal -i ~/.config/wall.png
 exec_always --no-startup-id xautolock -time 10 -locker slock
 exec_always --no-startup-id xcompmgr
+exec_always --no-startup-id xrandr --dpi 96
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -164,4 +166,16 @@ bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -D pulse sset Master
 bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -D pulse sset Master 10%+
 
 bindsym --release $alt+l        exec --no-startup-id /usr/local/bin/slock
+
+bindsym $mod+Shift+y        exec --no-startup-id "bash ~/scripts/i3resize left"
+bindsym $mod+Shift+u        exec --no-startup-id "bash ~/scripts/i3resize down"
+bindsym $mod+Shift+i        exec --no-startup-id "bash ~/scripts/i3resize up"
+bindsym $mod+Shift+o        exec --no-startup-id "bash ~/scripts/i3resize right"
+
+bindsym $mod+i              exec $term -e htop
+
+for_window [class="Kicad"] move to workspace 5
+
+
+
 
