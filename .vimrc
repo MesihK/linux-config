@@ -123,3 +123,6 @@ nnoremap <leader>jr :YcmCompleter GoToReferences<CR>
 
 vnoremap L >gv
 vnoremap H <gv
+
+let g:livepreview_previewer = 'zathura'
+

@@ -15,6 +15,7 @@ set $term --no-startup-id /usr/local/bin/st
 
 exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
 exec_always --no-startup-id xautolock -time 10 -locker slock
+exec_always --no-startup-id xcompmgr
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -123,38 +124,17 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+bindsym $alt+Shift+j resize shrink width 10 px or 10 ppt
+bindsym $alt+Shift+k resize grow height 10 px or 10 ppt
+bindsym $alt+Shift+l resize shrink height 10 px or 10 ppt
+bindsym $alt+Shift+semicolon resize grow width 10 px or 10 ppt
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $alt+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-altg exit'"
-
-# resize window (you can also use the mouse for that)
-mode "resize" {
-        # These bindings trigger as soon as you enter the resize mode
-
-        # Pressing left will shrink the window’s width.
-        # Pressing right will grow the window’s width.
-        # Pressing up will shrink the window’s height.
-        # Pressing down will grow the window’s height.
-        bindsym j resize shrink width 10 px or 10 ppt
-        bindsym k resize grow height 10 px or 10 ppt
-        bindsym l resize shrink height 10 px or 10 ppt
-        bindsym semicolon resize grow width 10 px or 10 ppt
-
-        # same bindings, but for the arrow keys
-        bindsym Left resize shrink width 10 px or 10 ppt
-        bindsym Down resize grow height 10 px or 10 ppt
-        bindsym Up resize shrink height 10 px or 10 ppt
-        bindsym Right resize grow width 10 px or 10 ppt
-
-        # back to normal: Enter or Escape
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-}
-
-bindsym $alt+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
@@ -169,8 +149,9 @@ bindsym $alt+e exec setxkbmap us
 #bindsym $alt+Return exec /opt/firefox/firefox
 bindsym $alt+Return exec /usr/bin/chromium-browser
 
+for_window [class="^.*"] border pixel 2
 gaps inner 10
-gaps outer 10
+gaps outer 0
 
 bindsym $mod+p                  exec --no-startup-id /home/mesih/scripts/monitor.sh
 bindsym $mod+Shift+a            exec --no-startup-id /home/mesih/scripts/audio.sh
@@ -179,8 +160,8 @@ bindsym $mod+r                  exec $term -e ranger
 bindsym $mod+Shift+r            exec $term -e sudo ranger
 
 bindsym XF86AudioMute           exec --no-startup-id amixer -D pulse sset Master 0
-bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -D pulse sset Master 5%-
-bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -D pulse sset Master 5%+
+bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -D pulse sset Master 10%-
+bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -D pulse sset Master 10%+
 
 bindsym --release $alt+l        exec --no-startup-id /usr/local/bin/slock
 

@@ -442,5 +442,4 @@ exec = ~/scripts/finance.sh
 interval = 600
 format-underline = #f50a4d
 
-
 ; vim:ft=dosini
