@@ -59,7 +59,7 @@ font-3 = Weather Icons:size=8;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = finance openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature date powermenu
+modules-right = finance openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature wlan date 
 
 tray-position = right
 tray-padding = 0

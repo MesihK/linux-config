@@ -9,5 +9,7 @@ ttf fonts can be used with adding to /usr/share/fonts/truetype/font-name/ & sudo
 'nmcli c' list saved wifi connections
 'nmcli d wifi list' list current wifi connections
 'nmcli c up "SavedWifiName"' connect to wifi
+if a file unintentionally added to git 'git rm --cached giant_file; git commit --ammend -CHEAD'
+
 
 
