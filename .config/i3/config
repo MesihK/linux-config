@@ -40,7 +40,9 @@ floating_modifier $mod
 
 # start a terminal
 #bindsym $mod+Return exec i3-sensible-terminal
-bindsym $mod+Return exec $term
+bindsym $mod+Return             split horizontal ;; exec $term
+bindsym $mod+Shift+Return       split vertical ;; exec $term
+
 
 # kill focused window
 bindsym $mod+q kill
@@ -159,6 +161,7 @@ bindsym $mod+p                  exec --no-startup-id /home/mesih/scripts/monitor
 bindsym $mod+Shift+a            exec --no-startup-id /home/mesih/scripts/audio.sh
 bindsym $mod+Shift+n            exec --no-startup-id gksu /home/mesih/scripts/net_fix.sh
 bindsym $mod+r                  exec $term -e ranger
+bindsym $mod+c                  exec $term -e calcurse
 bindsym $mod+Shift+r            exec $term -e sudo ranger
 
 bindsym XF86AudioMute           exec --no-startup-id amixer -D pulse sset Master 0

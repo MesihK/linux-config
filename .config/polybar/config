@@ -59,7 +59,7 @@ font-3 = Weather Icons:size=8;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = finance openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature eth wlan date 
+modules-right = todo finance openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature eth wlan date 
 
 tray-position = right
 tray-padding = 0
@@ -424,5 +424,11 @@ type = custom/script
 exec = ~/scripts/finance.sh
 interval = 600
 format-underline = #f50a4d
+
+[module/todo]
+type = custom/script
+exec = ~/scripts/todo.sh
+interval = 10
+format-underline = #55aa55
 
 ; vim:ft=dosini
