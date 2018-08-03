@@ -18,6 +18,7 @@ exec_always --no-startup-id wal -i ~/.config/wall.png
 exec_always --no-startup-id xautolock -time 10 -locker slock
 exec_always --no-startup-id xcompmgr
 exec_always --no-startup-id xrandr --dpi 96
+exec_always --no-startup-id mpd
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -164,9 +165,13 @@ bindsym $mod+r                  exec $term -e ranger
 bindsym $mod+c                  exec $term -e calcurse
 bindsym $mod+Shift+r            exec $term -e sudo ranger
 
-bindsym XF86AudioMute           exec --no-startup-id amixer -D pulse sset Master 0
+bindsym XF86AudioMute           exec --no-startup-id amixer -D pulse sset Master toggle
 bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -D pulse sset Master 10%-
 bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -D pulse sset Master 10%+
+bindsym XF86AudioNext           exec --no-startup-id mpc next
+bindsym XF86AudioPlay           exec --no-startup-id mpc toggle
+bindsym XF86AudioPrev           exec --no-startup-id mpc prev
+bindsym XF86AudioStop           exec --no-startup-id mpc toggle
 
 bindsym --release $alt+l        exec --no-startup-id /usr/local/bin/slock
 
