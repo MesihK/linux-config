@@ -183,7 +183,6 @@ bindsym $mod+Shift+o        exec --no-startup-id "bash ~/scripts/i3resize right"
 bindsym $mod+i              exec $term -e htop
 
 for_window [class="Kicad"] move to workspace 5
-
-
+for_window [class="chromium-browser"] move to workspace 2
 
 
