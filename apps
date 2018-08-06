@@ -13,4 +13,5 @@ jq              cmd json processor
 #fonts
 weather-icons   font that weather script uses https://github.com/erikflowers/weather-icons
 siji            font that polybar uses https://github.com/stark/siji
+scrot           screenchot
 

@@ -59,7 +59,7 @@ font-3 = Weather Icons:size=8;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = finance openweathermap-fullfeatured namaz alsa filesystem xkeyboard memory cpu battery temperature eth wlan date 
+modules-right = finance openweathermap-fullfeatured namaz pulseaudio filesystem xkeyboard memory cpu battery temperature eth wlan date 
 
 tray-position = right
 tray-padding = 0
@@ -279,7 +279,7 @@ label = %date% %time%
 [module/pulseaudio]
 type = internal/pulseaudio
 
-format-volume = <label-volume> <bar-volume>
+format-volume = <label-volume> 
 label-volume = VOL %percentage%%
 label-volume-foreground = ${root.foreground}
 

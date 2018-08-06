@@ -166,13 +166,14 @@ bindsym $mod+c                  exec $term -e calcurse
 bindsym $mod+Shift+r            exec $term -e sudo ranger
 
 bindsym XF86AudioMute           exec --no-startup-id amixer -D pulse sset Master toggle
-bindsym XF86AudioLowerVolume    exec --no-startup-id amixer -D pulse sset Master 10%-
-bindsym XF86AudioRaiseVolume    exec --no-startup-id amixer -D pulse sset Master 10%+
+bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume 0 -10%
+bindsym XF86AudioRaiseVolume    exec --no-startup-id pactl set-sink-volume 0 +10%
 bindsym XF86AudioNext           exec --no-startup-id mpc next
 bindsym XF86AudioPlay           exec --no-startup-id mpc toggle
 bindsym XF86AudioPrev           exec --no-startup-id mpc prev
 bindsym XF86AudioStop           exec --no-startup-id mpc toggle
 
+bindsym Print           exec --no-startup-id scrot -b -d 1 '%Y:%m:%d:%H:%M:%S.png' -e 'mv $f ~/Pictures/Screenshots'
 bindsym --release $alt+l        exec --no-startup-id /usr/local/bin/slock
 
 bindsym $mod+Shift+y        exec --no-startup-id "bash ~/scripts/i3resize left"
@@ -184,5 +185,4 @@ bindsym $mod+i              exec $term -e htop
 
 for_window [class="Kicad"] move to workspace 5
 for_window [class="chromium-browser"] move to workspace 2
-
 
