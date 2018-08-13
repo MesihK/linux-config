@@ -1,5 +1,7 @@
 #!/bin/bash
-EXTERNAL_OUTPUT="HDMI1"
+#EXTERNAL_OUTPUT="HDMI1"
+#EXTERNAL_OUTPUT="VGA1"
+EXTERNAL_OUTPUT=$(xrandr | grep ' connected' | grep -v LVDS | awk '{ print $1 }')
 INTERNAL_OUTPUT="LVDS1"
 
 # if we don't have a file, start at zero
