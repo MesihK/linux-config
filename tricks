@@ -13,6 +13,6 @@ if a file unintentionally added to git 'git rm --cached giant_file; git commit -
 if yocto complains about tmpdir that it has changed location then correct the path in TMPDIR/saved_tmpdir
 for kernel development copy ycm_extra_kernel_conf.py to kernel root dir with name: .ycm_extra_conf.py
 ccache used like this: CC='ccache gcc'
-
-
+use gtk-chtheme to change gtk themes
+'nmcli d wifi c SSIDNAME password SSIDPASS name SHORTNAME' to connect a wifi
 

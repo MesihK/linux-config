@@ -22,7 +22,8 @@ background = #222
 background-alt = #444
 ;foreground = ${xrdb:color7:#222}
 foreground = #dfdfdf
-foreground-alt = #555
+;foreground-alt = #555
+foreground-alt = #afafaf
 primary = #ffb52a
 secondary = #e60053
 alert = #bd2c40
@@ -59,7 +60,7 @@ font-3 = Weather Icons:size=8;1
 
 modules-left = bspwm i3
 modules-center = 
-modules-right = finance openweathermap-fullfeatured namaz pulseaudio filesystem xkeyboard memory cpu battery temperature eth wlan date 
+modules-right = mpd finance openweathermap-fullfeatured namaz pulseaudio filesystem xkeyboard memory cpu battery temperature eth wlan date 
 
 tray-position = right
 tray-padding = 0
@@ -172,7 +173,8 @@ label-urgent-padding = ${module/bspwm.label-urgent-padding}
 
 [module/mpd]
 type = internal/mpd
-format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+;format-online = <label-song>  <icon-prev> <icon-stop> <toggle> <icon-next>
+format-online = <label-song>  <toggle> 
 
 icon-prev = 
 icon-stop = 
@@ -180,7 +182,7 @@ icon-play = 
 icon-pause = 
 icon-next = 
 
-label-song-maxlen = 25
+label-song-maxlen = 20
 label-song-ellipsis = true
 
 [module/xbacklight]
@@ -422,7 +424,7 @@ format-underline = #0a6cf5
 [module/finance]
 type = custom/script
 exec = ~/scripts/finance.sh
-interval = 600
+interval = 60
 format-underline = #f50a4d
 
 [module/todo]
