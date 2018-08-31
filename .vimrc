@@ -2,6 +2,7 @@
 " This must be first, because it changes other options as a side effect.
 set nocompatible
 set t_Co=256
+set background=dark
 
 set hlsearch
 set relativenumber
@@ -59,7 +60,6 @@ set cursorline
 
 " Theme and Styling 
 syntax on
-"set t_Co=256
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
