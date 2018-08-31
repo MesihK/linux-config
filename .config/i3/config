@@ -141,13 +141,7 @@ bindsym $alt+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-altg exit'"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
-#bar {
-#        status_command ~/i3/status.sh
-#        tray_output primary
-#}
 
 bindsym $alt+t exec setxkbmap tr
 bindsym $alt+e exec setxkbmap us
@@ -184,5 +178,6 @@ bindsym $mod+Shift+o        exec --no-startup-id "bash ~/scripts/i3resize right"
 bindsym $mod+i              exec $term -e htop
 
 for_window [class="Kicad"] move to workspace 5
-for_window [class="chromium-browser"] move to workspace 2
+for_window [class="Zenom"] floating enable
+for_window [class="Zenom"] move to workspace 3
 
