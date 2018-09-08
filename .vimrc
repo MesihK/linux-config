@@ -43,11 +43,17 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 
 set nu
-" Set Proper Tabs
+
+" for pure hard tabs
 set tabstop=4
 set shiftwidth=4
-set smarttab
-set expandtab
+set noexpandtab
+
+" for pure spaces
+" set tabstop=4
+" set shiftwidth=4
+" set softtabstop=4
+" set expandtab
 
 " Always display the status line
 "set laststatus=2
@@ -56,7 +62,7 @@ set expandtab
 let g:elite_mode=1
 
 " Enable highlighting of the current line
-set cursorline
+" set cursorline
 
 " Theme and Styling 
 syntax on

@@ -180,4 +180,6 @@ bindsym $mod+i              exec $term -e htop
 for_window [class="Kicad"] move to workspace 5
 for_window [class="Zenom"] floating enable
 for_window [class="Zenom"] move to workspace 3
+for_window [class="VirtualBox"] floating enable
+for_window [class="Nemo"] floating enable
 
