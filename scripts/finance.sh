@@ -17,10 +17,19 @@ fi
 
 #USD satis
 USD=$(cat /tmp/fin.dat | grep -m 1 -A 11 '<h2>USD' |  grep -oP [0-9]+\.[0-9]+ | sed '2q;d' | cut -c -4)
+USD=$(echo $USD | sed 's|,|\.|g')
 
 #24 ayar alis
 GOLD=$(cat /tmp/fin.dat | grep -m 1 -A 7 ALT | grep -oP [0-9]+\.[0-9]+ | cut -c -6)
+GOLD=$(echo $GOLD | sed 's|,|\.|g' )
 
-echo $USD\$ $GOLD\G
+GOLD2=$(cat /tmp/fin.dat | grep -m 1 -A 14 ALT | grep -oP  [0-9]+\.[0-9]+ | sed '2q;d' | cut -c -6)
+GOLD2=$(echo $GOLD2 | sed 's|,|\.|g' )
+
+#total
+TOT=$(echo $GOLD\*36.76 | bc )
+
+#echo $USD\$ $GOLD\G $TOT
+echo $USD\$ $GOLD\-$GOLD2\G
 
 
