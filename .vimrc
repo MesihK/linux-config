@@ -25,6 +25,7 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'file:///home/mesih/.vim/bundle/scripts/'
 Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'arrufat/vala.vim'
 
 
 " All of your Plugins must be added before the following line

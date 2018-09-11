@@ -15,4 +15,5 @@ for kernel development copy ycm_extra_kernel_conf.py to kernel root dir with nam
 ccache used like this: CC='ccache gcc'
 use gtk-chtheme to change gtk themes
 'nmcli d wifi c SSIDNAME password SSIDPASS name SHORTNAME' to connect a wifi
+use 'man -k printf(regex)' to search man pages
 

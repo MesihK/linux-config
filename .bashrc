@@ -177,6 +177,10 @@ alias youtube-mp3="youtube-dl --audio-format mp3 --audio-quality 7 -x"
 alias iha="sshpass -p raspberry ssh pi@192.168.1.10"
 alias com="picocom --omap=crcrlf -s 'ascii-xfr -s' -v 'ascii-xfr -r' -b"
 
+word(){
+	wn $1 -over
+}
+
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
