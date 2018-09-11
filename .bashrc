@@ -201,13 +201,13 @@ if [ -x /usr/bin/mint-fortune ]; then
      /usr/bin/mint-fortune
 fi
 
+# set PATH so it includes user's private bin directories
+PATH="$HOME/bin:$HOME/.local/bin:$PATH"
 export PATH=/usr/java/jre1.8.0_151/bin/:$PATH
 export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
-echo TODO:
-cat ~/todo
+export PATH=/home/mesih/workspace/iha/sim/ardupilot/Tools/autotest:$PATH
+export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
 
-# Import colorscheme from 'wal' asynchronously
-#(cat ~/.cache/wal/sequences &)
-# To add support for TTYs this line can be optionally added.
-#source ~/.cache/wal/colors-tty.sh
+export EDITOR=vim
+export VISUAL=vim
 
