@@ -103,7 +103,7 @@ label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
-interval = 25
+interval = 600
 
 mount-0 = /
 
@@ -209,7 +209,7 @@ card = intel_backlight
 
 [module/cpu]
 type = internal/cpu
-interval = 2
+interval = 30
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #f90000
@@ -217,7 +217,7 @@ label = %percentage:2%%
 
 [module/memory]
 type = internal/memory
-interval = 2
+interval = 60
 format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #4bffdc
@@ -226,7 +226,7 @@ label = %gb_free%
 [module/wlan]
 type = internal/network
 interface = wlp2s0 
-interval = 3.0
+interval = 30
 
 format-connected = <ramp-signal> <label-connected>
 format-connected-underline = #9f78e1
@@ -248,7 +248,7 @@ ramp-signal-foreground = ${colors.foreground-alt}
 [module/eth]
 type = internal/network
 interface = enp8s0
-interval = 3.0
+interval = 30 
 
 format-connected-underline = #55aa55
 format-connected-prefix = " "
@@ -263,7 +263,7 @@ format-disconnected =
 
 [module/date]
 type = internal/date
-interval = 1
+interval = 60
 
 ;date =
 date = " %d/%m/%Y"
@@ -321,11 +321,14 @@ type = internal/battery
 battery = BAT0
 adapter = ADP1
 full-at = 98
+internal = 60
 
-format-charging = <animation-charging> <label-charging>
+#format-charging = <animation-charging> <label-charging>
+format-charging = <label-charging>
 format-charging-underline = #ffb52a
 
-format-discharging = <animation-discharging> <label-discharging>
+#format-discharging = <animation-discharging> <label-discharging>
+format-discharging = <label-discharging>
 format-discharging-underline = ${self.format-charging-underline}
 
 format-full-prefix = " "
@@ -424,13 +427,13 @@ format-underline = #0a6cf5
 [module/finance]
 type = custom/script
 exec = ~/scripts/finance.sh
-interval = 60
+interval = 600
 format-underline = #f50a4d
 
 [module/todo]
 type = custom/script
 exec = ~/scripts/todo.sh
-interval = 10
+interval = 60
 format-underline = #55aa55
 
 ; vim:ft=dosini

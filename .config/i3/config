@@ -14,11 +14,11 @@ set $alt Mod4
 set $term --no-startup-id /usr/local/bin/st
 
 #exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
-exec_always --no-startup-id wal -i ~/.config/wall.png
-exec_always --no-startup-id xautolock -time 10 -locker slock
+exec_always --no-startup-id wal -a 230 -c -i ~/.config/wall.png
+#exec_always --no-startup-id xautolock -time 10 -locker slock
 exec_always --no-startup-id xcompmgr
 exec_always --no-startup-id xrandr --dpi 96
-exec_always --no-startup-id mpd
+#exec_always --no-startup-id mpd
 
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -179,7 +179,8 @@ bindsym $mod+i              exec $term -e htop
 
 for_window [class="Kicad"] move to workspace 5
 for_window [class="Zenom"] floating enable
-for_window [class="Zenom"] move to workspace 3
+# for_window [class="Zenom"] move to workspace 3
 for_window [class="VirtualBox"] floating enable
 for_window [class="Nemo"] floating enable
+for_window [class="vlc"] floating enable
 
