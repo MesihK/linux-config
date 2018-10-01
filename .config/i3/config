@@ -13,11 +13,12 @@ set $mod Mod1
 set $alt Mod4
 set $term --no-startup-id /usr/local/bin/st
 
-#exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
-exec_always --no-startup-id wal -a 230 -c -i ~/.config/wall.png
-#exec_always --no-startup-id xautolock -time 10 -locker slock
+exec_always --no-startup-id feh --bg-scale ~/.config/wall.png
+#exec_always --no-startup-id wal -a 230 -c -i ~/.config/wall.png
+exec_always --no-startup-id xautolock -time 10 -locker slock
 exec_always --no-startup-id xcompmgr
 exec_always --no-startup-id xrandr --dpi 96
+exec_always --no-startup-id nm-applet
 #exec_always --no-startup-id mpd
 
 
@@ -155,6 +156,8 @@ gaps outer 0
 bindsym $mod+p                  exec --no-startup-id /home/mesih/scripts/monitor.sh
 bindsym $mod+Shift+a            exec --no-startup-id /home/mesih/scripts/audio.sh
 bindsym $mod+Shift+n            exec --no-startup-id gksu /home/mesih/scripts/net_fix.sh
+bindsym $mod+m            		exec --no-startup-id gksu /home/mesih/scripts/dmenumount.sh
+bindsym $mod+u            		exec --no-startup-id gksu /home/mesih/scripts/dmenuumount.sh
 bindsym $mod+r                  exec $term -e ranger
 bindsym $mod+c                  exec $term -e calcurse
 bindsym $mod+Shift+r            exec $term -e sudo ranger

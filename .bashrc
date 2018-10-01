@@ -176,6 +176,7 @@ alias youtube-opus="youtube-dl --audio-format opus --audio-quality 7 -x"
 alias youtube-mp3="youtube-dl --audio-format mp3 --audio-quality 7 -x"
 alias iha="sshpass -p raspberry ssh pi@192.168.1.10"
 alias com="picocom --omap=crcrlf -s 'ascii-xfr -s' -v 'ascii-xfr -r' -b"
+alias bckphdd='sudo rsync -aAXv / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} '
 
 word(){
 	wn $1 -over
