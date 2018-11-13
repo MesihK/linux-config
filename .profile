@@ -16,3 +16,5 @@ if [ -n "$BASH_VERSION" ]; then
     fi
 fi
 
+export PATH=/opt/gcc-arm-none-eabi-4_9-2015q3/bin:$PATH
+export PATH=/home/mesih/workspace/ardupilot/Tools/autotest:$PATH

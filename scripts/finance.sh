@@ -30,6 +30,7 @@ GOLD2=$(echo $GOLD2 | sed 's|,|\.|g' )
 TOT=$(echo $GOLD\*36.76 | bc )
 
 #echo $USD\$ $GOLD\G $TOT
-echo $USD\$ $GOLD\-$GOLD2\G
+#echo $USD\$ $GOLD\-$GOLD2\G
+echo $USD\$ 
 
 

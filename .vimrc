@@ -45,9 +45,24 @@ filetype plugin indent on    " required
 
 set nu
 
+" Don't force me to save when switching buffers
+"set hidden
+
+" sudo write this
+cmap W! silent w !sudo tee % >/dev/null
+
 " for pure hard tabs
-set tabstop=4
-set shiftwidth=4
+" set tabstop=4
+" set shiftwidth=4
+" set noexpandtab
+"
+" for black and white print outputs
+set printoptions+=syntax:n
+
+" for linux kernel development
+set tabstop=8
+set softtabstop=8
+set shiftwidth=8
 set noexpandtab
 
 " for pure spaces
@@ -67,6 +82,7 @@ let g:elite_mode=1
 
 " Theme and Styling 
 syntax on
+set title
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
