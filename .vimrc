@@ -150,3 +150,5 @@ vnoremap H <gv
 
 let g:livepreview_previewer = 'zathura'
 
+inoremap ,s Signed-off-by: Mesih Kilinc <mesihkilinc@gmail.com>
+

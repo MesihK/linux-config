@@ -36,3 +36,32 @@ mail gonderebilmek icin msmtp programini yukle 'export GPG_AGENT_INFO=${HOME}/.g
 multiple pager per sheet 'pdfnup'
 to cropt pdf 'pdfmargin'
 to print two sided first 'print odd pages' than 'reverse print even pages'
+
+
+## Upstreaming
+git format-patch -o ../patches/rfc_v1/ --cover-letter -n --thread=shallow -9 --subject-prefix="RFC PATCH v2"
+
+git rebase -i HEAD^^^ || git rebase -i HEAD~3
+git add && git commit --amend || git reset HEAD~ & git commit
+git rebase --continue
+
+git push origin force
+
+get to and cc addresses from cover patch
+use --in-reply-to= swtich for patch series. Old series first message id should be given.
+git send-email --to-cover --cc-cover path/to/patch/dir/*.patch
+--cc-cmd="scripts/get_maintainer.pl -i --norolestats" to interactively get the maintainers list
+
+Icenowy first patch: 20180119231735.61504-1-icenowy@aosc.io
+
+use --no-signed-off-by-cc to send only yourself
+git send-email --to-cmd="~/scripts/to.sh" --cc-cmd="~/scripts/cc.sh" 
+
+## Sync forked repo
+git remote add upstream https://github.com/torvalds/linux.git
+git fetch upstream
+git checkout master
+git merge upstream/master
+git checkout development
+git rebase master
+
