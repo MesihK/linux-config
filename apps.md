@@ -1,4 +1,4 @@
-#General
+## General
 * pywal           color scheme generator
 * sc-im           vim excell
 * calcurse        a calendar and todo program
@@ -11,8 +11,8 @@
 * slock           simple lock screen
 * jq              cmd json processor
 
-#Fonts
+## Fonts
 * weather-icons   font that weather script uses https://github.com/erikflowers/weather-icons
 * siji            font that polybar uses https://github.com/stark/siji
-* scrot           screenchot
+* scrot           screnshot
 
