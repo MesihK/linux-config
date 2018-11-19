@@ -1,0 +1,24 @@
+[user]
+	email = mesihkilinc@gmail.com
+	name = Mesih Kilinc
+[core]
+	editor = vim
+[diff]
+	tool = meld
+[color]
+	ui = auto
+[credential]
+	helper = cache
+[push]
+	default = matching
+[sendemail]
+	smtpserver = smtp.gmail.com
+	smtpserverport = 587
+	smtpencryption = tls
+	smtpuser = mesihkilinc@gmail.com
+	from = Mesih Kilinc <mesihkilinc@gmail.com>
+	chainreplyto = false
+	thread = false
+#	suppresscc = self
+#	cccmd = ~/scripts/cc.sh
+#	tocmd = ~/scripts/to.sh
