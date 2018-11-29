@@ -65,3 +65,10 @@
 * `git checkout development`
 * `git rebase master`
 
+
+## GIT
+* `git checkout -- .` to reset all modified files
+* `git clean -fd` to remove all untracked files
+* `git am path/to/patch` to apply a patch
+
+
