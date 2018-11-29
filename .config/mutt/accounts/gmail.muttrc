@@ -1,0 +1,28 @@
+# vim: filetype=neomuttrc
+# muttrc file for account gmail
+set realname = "Mesih Kilinc"
+set from = "mesihkilinc@gmail.com"
+set sendmail = "/usr/bin/msmtp -a gmail"
+set folder = "~/.mail/gmail"
+set header_cache = ~/.config/mutt/accounts/gmail/cache/headers
+set message_cachedir = ~/.config/mutt/accounts/gmail/cache/bodies
+set certificate_file = ~/.config/mutt/accounts/gmail/certificates
+source "~/.config/mutt/credentials/getmuttpass gmail |"
+
+alias me Mesih Kilinc <mesihkilinc@gmail.com>
+
+set mbox_type = Maildir
+set ssl_starttls = yes
+set ssl_force_tls = yes
+
+bind index,pager gg noop
+bind index,pager g noop
+bind index gg first-entry
+unmailboxes *
+mailboxes =gmail =------------------- "=[Gmail].Sent" 
+macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
+macro index,pager gs "<change-folder>=[Gmail].Sent Mail<enter>" "Go to sent."
+set spoolfile = "+INBOX"
+set record = ""
+set postponed = ""
+set trash = ""
