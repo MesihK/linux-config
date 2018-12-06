@@ -16,3 +16,8 @@
 * siji            font that polybar uses https://github.com/stark/siji
 * scrot           screnshot
 
+## Snipping Tool
+* `sudo add-apt-repository ppa:shutter/ppa
+  sudo apt-get update
+  sudo apt-get install shutter`
+

@@ -70,5 +70,10 @@
 * `git checkout -- .` to reset all modified files
 * `git clean -fd` to remove all untracked files
 * `git am path/to/patch` to apply a patch
+* `git stash save --keep-index` to stash only un-staged changes
 
+## Latex
+* For Turkish tex there is a problem with `includegraphics` and can be solved by
+`https://latex.org/forum/viewtopic.php?t=11060`  adding this two command before
+and after `\shorthandoff{=}` `\shorthandon{=}`
 

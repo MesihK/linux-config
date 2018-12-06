@@ -159,8 +159,9 @@ bindsym $mod+Shift+n            exec --no-startup-id gksu /home/mesih/scripts/ne
 bindsym $mod+m            		exec --no-startup-id gksu /home/mesih/scripts/dmenumount.sh
 bindsym $mod+u            		exec --no-startup-id gksu /home/mesih/scripts/dmenuumount.sh
 bindsym $mod+r                  exec $term -e ranger
-bindsym $mod+c                  exec $term -e calcurse
+# bindsym $mod+c                  exec $term -e calcurse
 bindsym $mod+Shift+r            exec $term -e sudo ranger
+bindsym $mod+c                  exec --no-startup-id shutter
 
 bindsym XF86AudioMute           exec --no-startup-id amixer -D pulse sset Master toggle
 bindsym XF86AudioLowerVolume    exec --no-startup-id pactl set-sink-volume 0 -10%
@@ -186,4 +187,4 @@ for_window [class="Zenom"] floating enable
 for_window [class="VirtualBox"] floating enable
 for_window [class="Nemo"] floating enable
 for_window [class="vlc"] floating enable
-
+for_window [class="Shutter"] floating enable

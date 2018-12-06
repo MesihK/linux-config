@@ -19,11 +19,9 @@ bind index,pager gg noop
 bind index,pager g noop
 bind index gg first-entry
 unmailboxes *
-mailboxes =gtu =------------------- "=Calendar.Birthdays" "=Junk Email" "=Kalite" "=Contacts" "=Sent Items" "=INBOX" "=Archive" "=Conversation History" "=Calendar" "=Tasks" "=Calendar.United States holidays" "=Outbox" "=Journal" "=Notes" "=Deleted Items" "=Drafts"
+mailboxes =gtu =------------------- "=Sent Items" "=INBOX" 
 macro index,pager gi "<change-folder>=INBOX<enter>" "Go to inbox."
 macro index,pager gs "<change-folder>=Sent Items<enter>" "Go to sent."
-macro index,pager gd "<change-folder>=Drafts<enter>" "Go to drafts."
-macro index,pager ga "<change-folder>=Archive<enter>" "Go to archive."
 set spoolfile = "+INBOX"
 set record = "+Sent Items"
 set postponed = "+Drafts"

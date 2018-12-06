@@ -219,6 +219,9 @@ export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
 export EDITOR=vim
 export VISUAL=vim
 
+set editing-mode vi
+set -o vi
+
 #for mutt
 export GPG_AGENT_INFO=${HOME}/.gnupg/S.gpg-agent:0:1
 
