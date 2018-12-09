@@ -84,3 +84,9 @@ and after `\shorthandoff{=}` `\shorthandon{=}`
 * use picocom to connect embedded system
 * invoke `rz` on embedded system
 * invoke picocom send through `ctrl+a, s` 
+
+## Receiving a file from an embedded system through uart that runs shell
+* use picocom to connect embedded system
+* invoke `rs -e --delay-startup 5` on embedded system
+* invoke picocom receive through `ctrl+a, r` with `-e` option 
+
