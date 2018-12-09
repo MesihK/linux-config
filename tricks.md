@@ -77,3 +77,10 @@
 `https://latex.org/forum/viewtopic.php?t=11060`  adding this two command before
 and after `\shorthandoff{=}` `\shorthandon{=}`
 
+## Sending a file to an embedded system through uart that runs shell
+* install lrzsz package to embedded system. 
+* Can be installed by buildroot.
+(Target Packages -> Networking Applications -> lrzsz)
+* use picocom to connect embedded system
+* invoke `rz` on embedded system
+* invoke picocom send through `ctrl+a, s` 
