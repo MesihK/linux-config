@@ -1,3 +1,8 @@
 EESchema-DOCLIB  Version 2.0
 #
+$CMP lichee_nano
+D Lichee Pi Nano F1C100s Board
+K F1C100s
+$ENDCMP
+#
 #End Doc Library
