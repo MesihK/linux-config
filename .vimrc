@@ -90,11 +90,6 @@ set backspace=indent,eol,start
 set ruler		" show the cursor position all the time
 set incsearch		" do incremental searching
 
-" In many terminal emulators the mouse works just fine, thus enable it.
-if has('mouse')
-  set mouse=a
-endif
-
 set nowrap
 set nobackup
 set nowritebackup
