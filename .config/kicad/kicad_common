@@ -1,0 +1,16 @@
+WorkingDir=/home/mesih
+ShowEnvVarWarningDialog=0
+kicad_fplib_url=https://github.com/KiCad
+kicad_fplib_last_download_dir=/home/mesih/workspace/kicad/kicad-library
+UseIconsInMenus=1
+Editor=/usr/local/bin/vim
+[EnvironmentVariables]
+KICAD_PTEMPLATES=/usr/share/kicad/template/
+KICAD_SYMBOL_DIR=/usr/share/kicad/library
+KICAD_TEMPLATE_DIR=/usr/share/kicad/template
+KICAD_USER_TEMPLATE_DIR=/home/kicad/template
+KISYS3DMOD=/usr/share/kicad/modules/packages3d
+KISYSMOD=/usr/share/kicad/modules
+OLIMEX_COMP=/home/mesih/.config/kicad/OlimexKiCAD/KiCAD_Components
+OLIMEX_FP=/home/mesih/.config/kicad/OlimexKiCAD/KiCAD_Footprints
+USER_LIBS=/home/mesih/.config/kicad/lib
