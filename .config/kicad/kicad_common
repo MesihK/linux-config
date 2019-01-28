@@ -13,4 +13,5 @@ KISYS3DMOD=/usr/share/kicad/modules/packages3d
 KISYSMOD=/usr/share/kicad/modules
 OLIMEX_COMP=/home/mesih/.config/kicad/OlimexKiCAD/KiCAD_Components
 OLIMEX_FP=/home/mesih/.config/kicad/OlimexKiCAD/KiCAD_Footprints
+SPARKFUN=/home/mesih/.config/kicad/SparkFun-Kicad-Libraries
 USER_LIBS=/home/mesih/.config/kicad/lib
