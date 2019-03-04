@@ -147,7 +147,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 bindsym $alt+t exec setxkbmap tr
 bindsym $alt+e exec setxkbmap us
 #bindsym $alt+Return exec /opt/firefox/firefox
-bindsym $alt+Return exec /usr/bin/chromium-browser
+bindsym $alt+Return exec /usr/bin/google-chrome-stable
 
 for_window [class="^.*"] border pixel 2
 gaps inner 10
@@ -181,10 +181,11 @@ bindsym $mod+Shift+o        exec --no-startup-id "bash ~/scripts/i3resize right"
 
 bindsym $mod+i              exec $term -e htop
 
-for_window [class="Kicad"] move to workspace 5
+#for_window [class="Kicad"] move to workspace 5
 for_window [class="Zenom"] floating enable
 # for_window [class="Zenom"] move to workspace 3
 for_window [class="VirtualBox"] floating enable
 for_window [class="Nemo"] floating enable
 for_window [class="vlc"] floating enable
 for_window [class="Shutter"] floating enable
+for_window [class="feh"] floating enable

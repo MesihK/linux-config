@@ -2,7 +2,7 @@
 #EXTERNAL_OUTPUT="HDMI1"
 #EXTERNAL_OUTPUT="VGA1"
 EXTERNAL_OUTPUT=$(xrandr | grep ' connected' | grep -v LVDS | awk '{ print $1 }')
-INTERNAL_OUTPUT="LVDS1"
+INTERNAL_OUTPUT="LVDS-1"
 
 # if we don't have a file, start at zero
 if [ ! -f "/tmp/monitor_mode.dat" ] ; then

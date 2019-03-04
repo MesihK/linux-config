@@ -172,12 +172,13 @@ duu(){
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 alias youtube-dl360="youtube-dl -f 'bestvideo[height<=480]+bestaudio/best[height<=480]'"
-alias youtube-opus="youtube-dl --audio-format opus --audio-quality 7 -x"
-alias youtube-mp3="youtube-dl --audio-format mp3 --audio-quality 7 -x"
+alias youtube-opus="youtube-dl --audio-format opus --audio-quality 7 -x --download-archive"
+alias youtube-mp3="youtube-dl --audio-format mp3 --audio-quality 7 -x --download-archive"
 alias iha="sshpass -p raspberry ssh pi@192.168.1.10"
 alias com="picocom --omap=crcrlf -s 'ascii-xfr -s' -v 'ascii-xfr -r' -b"
 alias bckphdd='sudo rsync -aAX --delete  --info=progress2 / --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found"} /media/mesih/hdd1/backup/ '
 alias pdfbook='pdfbook --short-edge'
+alias rmcore=' find -name core -type f -print0 2>/dev/null | xargs -0 rm'
 
 word(){
 	wn $1 -over
@@ -209,20 +210,21 @@ fi
 
 # set PATH so it includes user's private bin directories
 PATH="$HOME/bin:$HOME/.local/bin:$PATH"
-export PATH=/usr/java/jre1.8.0_151/bin/:$PATH
-export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
-export PATH=/home/mesih/workspace/iha/sim/ardupilot/Tools/autotest:$PATH
-export PATH=/opt/atolic/ARMTools/bin:$PATH
-export PATH=/opt/atolic/ide:$PATH
-export LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
+export PATH=$PATH:/usr/java/jre1.8.0_151/bin
+export PATH=$PATH:/usr/local/texlive/2018/bin/x86_64-linux
+export PATH=$PATH:/home/mesih/workspace/iha/sim/ardupilot/Tools/autotest
+export PATH=$PATH:/opt/atolic/ARMTools/bin
+export PATH=$PATH:/opt/atolic/ide
+export PATH=$PATH:/media/mesih/hdd1/Xilinx/SDK/2018.3/bin
+export LD_LIBRARY_PATH=/usr/local/lib/
 
 export EDITOR=vim
 export VISUAL=vim
 
-set editing-mode vi
-set -o vi
+#set editing-mode vi
+#set -o vi
 
 #for mutt
 export GPG_AGENT_INFO=${HOME}/.gnupg/S.gpg-agent:0:1
 
-
+#tput smkx

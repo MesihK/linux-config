@@ -103,7 +103,7 @@ label-indicator-underline = ${colors.secondary}
 
 [module/filesystem]
 type = internal/fs
-interval = 600
+interval = 60
 
 mount-0 = /
 
